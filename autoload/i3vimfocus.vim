@@ -1,7 +1,7 @@
 let s:plugin_path = escape(expand('<sfile>:p:h'), '\')
 
-exe 'pyfile ' . escape(s:plugin_path, ' ') . '/i3vimfocus.py'
+exe 'py3file ' . escape(s:plugin_path, ' ') . '/i3vimfocus.py'
 
 function! i3vimfocus#PythonExecProcess(name, args)
-    python PythonExecSubprocess()
+    python3 PythonExecSubprocess()
 endfunction
