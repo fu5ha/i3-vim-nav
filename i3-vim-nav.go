@@ -12,8 +12,6 @@ import (
 )
 
 func main() {
-	//ipsocket, err := i3ipc.GetIPCSocket()
-
 	dir := string(os.Args[1])
 
 	if match, _ := regexp.MatchString(`h|j|k|l`, dir); !match {
@@ -33,7 +31,6 @@ func main() {
 		if out != nil {
 			fmt.Println(out)
 		}
-		//window.SendKeysequence("control+"+dir, 12)
 	} else {
 		conn, err := i3ipc.GetIPCSocket()
 		if err != nil {
