@@ -23,7 +23,7 @@ go get -u github.com/termhn/i3-vim-nav
 ```
 if you have go installed.
 
-Then, in your i3 config:
+Then, in your i3 config (adjust the path to the executable as necessary if you installed it differently):
 
 ```
 bindsym --release $mod+h exec --no-startup-id "~/bin/i3-vim-nav h"
