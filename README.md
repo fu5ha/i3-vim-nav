@@ -6,7 +6,7 @@ Seamlessly navigate between i3 windows and vim splits.
 Using vim-plug (recommended), in vimrc/init.vim
 
 ```vim
-Plug 'termhn/i3-vim-nav', { 'do': 'mkdir ~/bin && ln -s i3-vim-nav ~/bin' }
+Plug 'termhn/i3-vim-nav', { 'do': './install.sh' }
 
 
 " i3 integration
