@@ -1,5 +1,5 @@
 # i3-vim-nav
-Seamlessly navigate between i3 windows and vim splits.
+Seamlessly change focus between i3 windows and Vim splits using the same hotkey.
 
 # Installation
 
@@ -42,7 +42,7 @@ If not, you can link the binary from its downloaded directory (this changes base
 ln -s ~/.vim/bundle/i3-vim-nav/i3-vim-nav /usr/local/bin
 ```
 
-Then, in your i3 config (adjust the path to the executable as necessary if you installed it differently):
+Then, in your i3 config (adjust the path to the executable as necessary if you installed it differently). Feel free to change the key bind as you please.
 
 ```
 bindsym --release $mod+h exec --no-startup-id "i3-vim-nav h"
