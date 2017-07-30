@@ -28,7 +28,7 @@ func main() {
 	if r.MatchString(name) {
 		keycmd := exec.Command("xdotool", "key", "--clearmodifiers", "control+"+dir)
 		out, _ := keycmd.Output()
-		if out != nil {
+		if len(out) > 0 {
 			fmt.Println(out)
 		}
 	} else {
