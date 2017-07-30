@@ -26,7 +26,7 @@ func main() {
 	r, _ := regexp.Compile(`\bn?v(im)?$`)
 
 	if r.MatchString(name) {
-		keycmd := exec.Command("xdotool", "key", "--clearmodifiers", "control+"+dir)
+		keycmd := exec.Command("xdotool", "key", "--clearmodifiers", "Escape+control+"+dir)
 		out, _ := keycmd.Output()
 		if len(out) > 0 {
 			fmt.Println(out)
