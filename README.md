@@ -44,7 +44,7 @@ Next, install the binary on your PATH. If you have go installed, this can be don
 ```
 go get -u github.com/termhn/i3-vim-nav
 ```
-If not, you can symlink the binary from its downloaded directory (this changes based on which plugin manager you used and if you're using vim or neovim into /usr/local/bin. For example, if you used Pathogen on default Vim, this would be:
+If not, you can symlink the binary from its downloaded directory (this changes based on which plugin manager you used and if you're using vim or neovim) into /usr/local/bin. For example, if you used Pathogen on default Vim, this would be:
 
 ```
 ln -s ~/.vim/bundle/i3-vim-nav/i3-vim-nav /usr/local/bin
