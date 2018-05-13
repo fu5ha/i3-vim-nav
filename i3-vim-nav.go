@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"strings"
 
-	xdo "github.com/aep/xdo-go"
 	"github.com/proxypoke/i3ipc"
+	"github.com/vbrown608/xdo-go"
 )
 
 func main() {
@@ -19,13 +19,7 @@ func main() {
 		return
 	}
 
-	xdot := xdo.NewXdo()
-	window := xdot.GetActiveWindow()
-	name := strings.ToLower(window.GetName())
-
-	r, _ := regexp.Compile(`\bn?v(im)?$`)
-
-	if r.MatchString(name) {
+	if windowIsVim() {
 		keycmd := exec.Command("xdotool", "key", "--clearmodifiers", "Escape+control+"+dir)
 		out, _ := keycmd.Output()
 		if len(out) > 0 {
@@ -44,5 +38,16 @@ func main() {
 		m["l"] = "right"
 		conn.Command("focus " + m[dir])
 	}
+}
 
+func windowIsVim() bool {
+	xdot := xdo.NewXdo()
+	window, err := xdot.GetActiveWindow()
+	if err != nil {
+		return false
+	}
+
+	name := strings.ToLower(window.GetName())
+	r, _ := regexp.Compile(`\bn?v(im)?$`)
+	return r.MatchString(name)
 }
